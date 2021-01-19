@@ -1,6 +1,6 @@
 # Projeto Django-API
-[![Project Version][version-image][version-url]]
-[![Backend][Backend-image][Backend-url]]
+[![Project Version][version-image]][version-url]
+[![Python][Backend-image]][Backend-url]
 
 ## Executar o projeto localmente
 

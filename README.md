@@ -59,8 +59,8 @@ Com os dois usuários criados e suas respectivas senhas em mão seguir os seguin
 {
     "contacts" : [
         {
-            "name": string,
-            "cellphone": string
+            "name": "string",
+            "cellphone": "string"
         }
     ]
 }

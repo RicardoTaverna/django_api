@@ -21,7 +21,6 @@ def contacts_add(request):
     }
     
     if str(content['user']).lower() == 'macapa':
-        print(request.data['contacts'])
         serializer = []
         for contact in request.data['contacts']:
             contact['cellphone'] = _format_phone(contact['cellphone'])

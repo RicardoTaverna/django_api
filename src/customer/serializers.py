@@ -11,3 +11,6 @@ class ContactsVarejaoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ContactsVarejao
         fields = ['name', 'cellphone']
+    
+    def create(self, validated_data):
+        return ContactsVarejao(**validated_data)

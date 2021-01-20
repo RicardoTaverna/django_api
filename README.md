@@ -1,6 +1,5 @@
 # Projeto Django-API
-[![Project Version][version-image]][version-url]
-[![Python][Backend-image]][Backend-url]
+Criado um serviço que recebe dados através de um endpoint, e de acordo com o cliente salva os dados em seus respectivos bancos de dados.
 
 ## Executar o projeto localmente
 
@@ -31,12 +30,75 @@ Para o correto funcionamento da API é necessário seguir os passos abaixo:
 - start do servidor localmente
     - python manage.py runserver
 
->*importante*
-- acessar com o super usuário localhost:5000/admin
+>**importante**
+- acessar com o super usuário localhost:8000/admin
 - criar dois novos usuários
     - _username_: varejao
     - _username_: macapa
+---
+### Fluxo para enviar dados
+Com os dois usuários criados e suas respectivas senhas em mão seguir os seguintes passos:
+- Gerar token de autenticação para o usuário pelo endpoint _localhost:8000/api/token/_ utilizando o username e senha
+- Adicionar o token ao Bearer de autenticação do endpoint _localhost:8000/api/contacts/_
+- Enviar o payload referente ao usuário (usuário varejao: payload contacts-varejao, usuário macapa: payload contacts-macapa) pelo endpoint _localhost:8000/api/contacts/_
+>**importante:** gerar o token para um usuario e em seguida efetuar o disparo do seu payload, pois o token expira a cada 60 segundos.
 
 
 ---
 ## Endpoints
+
+#### Acesso ao painel administrador
+> localhost:8000/admin/
+
+---
+#### Endpoint para adicionar contados
+> localhost:8000/api/contacts/
+
+#### **_payload_:**
+```json
+{
+    "contacts" : [
+        {
+            "name": string,
+            "cellphone": string
+        }
+    ]
+}
+```
+#### _necessita token de autenticação Bearer_
+---
+#### Endpoint para gerar token de autenticação
+>localhost:8000/api/token/
+#### **_payload_:**
+```json
+{
+  "username": [
+    "This field is required."
+  ],
+  "password": [
+    "This field is required."
+  ]
+}
+```
+---
+#### Endpoint para refresh do token de autenticação
+>api/token/refresh/
+#### **_payload_:**
+```json
+{
+  "refresh": [
+    "This field is required."
+  ]
+}
+```
+---
+#### Endpoint para verificar token de autenticação
+>api/token/verify/
+#### **_payload_:**
+```json
+{
+  "token": [
+    "This field is required."
+  ]
+}
+```

@@ -11,7 +11,8 @@ Você pode rodar qualquer um dos comandos abaixo para criar os bancos de dados l
 ---
 ### Configurações do python
 <p>Criar um ambiente virtual para instalar os requisitos.</p>
-_Observações_ : O arquivo de requirements foi criado utilizando python 3.9, versões anteriores do python podem ter incompatibilidade
+<br />
+**_Observações_** : O arquivo de requirements foi criado utilizando python 3.9, versões anteriores do python podem ter incompatibilidade
 
 - pip install -r requirements
 

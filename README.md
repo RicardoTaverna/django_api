@@ -106,6 +106,4 @@ Com os dois usuários criados e suas respectivas senhas em mão seguir os seguin
 <br />
 
 > **Muito Importante**:
-<br>
-
 > Caso rode esse projeto no Windows, é necessário entrar na arquivo _src/api/settings.py_ e trocar o host do banco de dados default _(linha 85)_ de '0.0.0.0' para 'localhost'

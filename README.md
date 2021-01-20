@@ -3,7 +3,7 @@ Criado um serviço que recebe dados através de um endpoint, e de acordo com o c
 
 ## Executar o projeto localmente
 
-### Start do bancos de dados
+### Start dos bancos de dados
 Você pode rodar qualquer um dos comandos abaixo para criar os bancos de dados localmente:
 - docker-compose up
 - make run
